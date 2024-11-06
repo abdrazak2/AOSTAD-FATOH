@@ -1,0 +1,212 @@
+/* styles.css */
+
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* خلفية الموقع باللون الأسود */
+    color: #fff; /* النصوص بيضاء */
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+/* رأس الصفحة */
+header {
+    background-color: #333; /* خلفية داكنة */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6347;
+    transform: scale(1.1);
+}
+
+/* القسم الرئيسي */
+section#home {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #222; /* خلفية داكنة للقسم الرئيسي */
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #FF6347; /* لون أحمر لتسليط الضوء */
+    animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* تأثير fade-in عند ظهور النص */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* قسم القصيدة */
+section#poem {
+    padding: 60px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    color: #FF6347; /* لون أحمر */
+    margin-bottom: 20px;
+}
+
+/* تنسيق الأبيات */
+.poem-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ddd; /* لون النص الفاتح */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.poem-container p {
+    margin: 15px 0;
+    text-align: right;
+}
+
+/* قسم الصور التفاعلية */
+#images {
+    padding: 60px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+#images h2 {
+    font-size: 36px;
+    color: #FF6347;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-container .interactive-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container .interactive-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.5);
+}
+
+/* الفوتر */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+/* التصميم المتجاوب للأجهزة */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .poem-container {
+        font-size: 16px;
+    }
+
+    .image-container .interactive-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 24px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .poem-container {
+        font-size: 14px;
+    }
+
+    .image-container .interactive-image {
+        width: 100px;
+        height: 100px;
+    }
+}
